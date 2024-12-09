@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Translate Override",
+    "version": "1.0",
+    "description": "Removes the translate=\"no\" attribute from pages.",
+    "permissions": ["scripting"],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
